@@ -1,3 +1,9 @@
 alias ls='ls --color'
 LS_COLORS='di=36:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35:*.rpm=90'
 export LS_COLORS
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWUPSTREAM="auto"
+export GIT_PS1_DESCRIBE_STYLE="branch"
+source /etc/bash_completion.d/git
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
