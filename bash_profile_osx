@@ -5,6 +5,15 @@ alias jhbuild="~/.local/bin/jhbuild"
 alias sublime="/Applications/Sublime\ Text.app/Contents/MacOS/Sublime\ Text"
 alias matlab="/Applications/MATLAB_R2014a.app/bin/matlab"
 alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
-PS1="[\w] \u\$ "
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+
+# show git branch / status in repository
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWUPSTREAM="auto"
+export GIT_PS1_DESCRIBE_STYLE="branch"
+#PS1="[\w] \u\$ "
+PS1="[\[\033[32m\]\w]\[\033[0m\]\$(__git_ps1)\n\[\033[1;36m\]\u\[\033[32m\]$ \[\
+\033[0m\]"
