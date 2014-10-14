@@ -8,6 +8,10 @@ alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
+# virtualenvironment
+export WORKON_HOME=~/Documents/Envs
+source /usr/local/bin/virtualenvwrapper.sh
+
 # show git branch / status in repository
 source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
