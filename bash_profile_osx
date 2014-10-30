@@ -9,7 +9,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # virtualenvironment
-export WORKON_HOME=~/Documents/Envs
+export WORKON_HOME=~/Envs
 source /usr/local/bin/virtualenvwrapper.sh
 
 # show git branch / status in repository
@@ -21,3 +21,6 @@ export GIT_PS1_DESCRIBE_STYLE="branch"
 #PS1="[\w] \u\$ "
 PS1="[\[\033[32m\]\w]\[\033[0m\]\$(__git_ps1)\n\[\033[1;36m\]\u\[\033[32m\]$ \[\
 \033[0m\]"
+
+# git configuration
+git config --global --add alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
