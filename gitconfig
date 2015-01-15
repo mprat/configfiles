@@ -1,0 +1,9 @@
+[alias]
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[user]
+	name = Michele Pratusevich
+	email = mprat@mit.edu
+[push]
+	default = matching
+[core]
+	editor = vim
