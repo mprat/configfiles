@@ -2,7 +2,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
 export MATLAB_JAVA="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre"
 alias jhbuild="~/.local/bin/jhbuild"
-alias sublime="/Applications/Sublime\ Text.app/Contents/MacOS/Sublime\ Text"
+alias sublime="/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
 alias matlab="/Applications/MATLAB_R2014a.app/bin/matlab"
 alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
 export CLICOLOR=1
@@ -23,4 +23,4 @@ PS1="[\[\033[32m\]\w]\[\033[0m\]\$(__git_ps1)\n\[\033[1;36m\]\u\[\033[32m\]$ \[\
 \033[0m\]"
 
 # git configuration
-git config --global --add alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
+# git config --global --add alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
