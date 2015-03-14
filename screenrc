@@ -1,0 +1,4 @@
+startup_message off
+defscrollback 2000
+caption always "%{= ck}%H.potager > %t  %= %Y-%m-%d | %c"
+hardstatus alwayslastline "%-Lw%{+b kc}%50>%n%f* %t%{-}%+Lw%<"
