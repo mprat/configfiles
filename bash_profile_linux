@@ -5,7 +5,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM="auto"
 export GIT_PS1_DESCRIBE_STYLE="branch"
-source /etc/bash_completion.d/git
+# source /etc/bash_completion.d/git
 source /etc/bash_completion.d/git-prompt
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
