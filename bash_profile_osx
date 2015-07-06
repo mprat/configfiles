@@ -1,6 +1,6 @@
 # environment variables, especially for caffe
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
+# export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+# export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
 
 #export MATLAB_JAVA="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre"
 
@@ -33,3 +33,11 @@ export PATH="/Users/mprat/anaconda/bin:$PATH"
 
 # git configuration
 # git config --global --add alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
+
+# added by Anaconda 2.2.0 installer
+export PATH="/Users/mprat/anaconda/bin:$PATH"
+
+# git bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
