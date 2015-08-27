@@ -34,6 +34,9 @@ export PATH="/Users/mprat/anaconda/bin:$PATH"
 # git configuration
 # git config --global --add alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
 
+# force Python not to write .pyc or .pyo files
+export PYTHONDONTWRITEBYTECODE=1
+
 # added by Anaconda 2.2.0 installer
 export PATH="/Users/mprat/anaconda/bin:$PATH"
 
