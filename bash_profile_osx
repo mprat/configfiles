@@ -1,14 +1,18 @@
 # environment variables, especially for caffe
 # export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
+# export PYTHONPATH=$PYTHONPATH:/Users/mprat/gtk/inst/lib/python2.7/site-packages
 
 #export MATLAB_JAVA="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre"
 
 #alias for various programs
-#alias jhbuild="~/.local/bin/jhbuild"
+alias jhbuild="~/.local/bin/jhbuild"
 alias sublime="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
-#alias matlab="/Applications/MATLAB_R2014a.app/bin/matlab"
+alias matlab="/Applications/MATLAB_R2015b.app/bin/matlab"
 #alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
+
+# ipython alias
+alias ipy_ditto="ipython -i -- /Users/mprat/Ditto/ditto-cnn/src/setup_paths.py"
 
 # terminal colors
 export CLICOLOR=1
@@ -44,3 +48,6 @@ export PATH="/Users/mprat/anaconda/bin:$PATH"
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
+
+# required for installation of https://github.com/RobotLocomotion/drake.git
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig
