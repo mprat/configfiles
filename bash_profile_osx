@@ -8,7 +8,7 @@
 #alias for various programs
 alias jhbuild="~/.local/bin/jhbuild"
 alias sublime="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
-alias matlab="/Applications/MATLAB_R2015b.app/bin/matlab"
+# alias matlab="/Applications/MATLAB_R2015b.app/bin/matlab"
 #alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
 
 # ipython alias
@@ -19,8 +19,9 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # virtualenvironment
-export WORKON_HOME=~/Envs
-source /usr/local/bin/virtualenvwrapper.sh
+# VIRTUALENVWRAPPER_PYTHON=`which python`
+# export WORKON_HOME=~/.virtualenvs
+# source /Users/mprat/anaconda/bin/virtualenvwrapper.sh
 
 # show git branch / status in repository
 source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
@@ -32,9 +33,6 @@ export GIT_PS1_DESCRIBE_STYLE="branch"
 PS1="[\[\033[32m\]\w]\[\033[0m\]\$(__git_ps1)\n\[\033[1;36m\]\u\[\033[32m\]$ \[\
 \033[0m\]"
 
-# anaconda stuff
-export PATH="/Users/mprat/anaconda/bin:$PATH"
-
 # git configuration
 # git config --global --add alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
 
@@ -44,10 +42,19 @@ export PYTHONDONTWRITEBYTECODE=1
 # added by Anaconda 2.2.0 installer
 export PATH="/Users/mprat/anaconda/bin:$PATH"
 
+# virtualenvironment (from anaconda)
+export WORKON_HOME=~/.virtualenvs
+source /Users/mprat/anaconda/bin/virtualenvwrapper.sh
+
 # git bash completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
 # required for installation of https://github.com/RobotLocomotion/drake.git
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig
+# export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# for sourcing
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
