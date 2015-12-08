@@ -58,3 +58,7 @@ fi
 
 # for sourcing
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Bazel
+source /Users/mprat/.bazel/bin/bazel-complete.bash
+export PATH="$PATH:$HOME/bin" 
