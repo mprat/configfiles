@@ -3,12 +3,16 @@
 
 export ANACONDA=$HOME/anaconda
 export CUDA=/usr/local/cuda
+export CUDNN=/usr/local/cudnnv3
 
 export CAFFE_ROOT=$HOME/Research/packages/caffe
-export DITTO_CNN_TOOLS_ROOT=$HOME/Ditto/ditto-cnn-tools
 export SPEARMINT_ROOT=$HOME/personal/repos/spearmint/spearmint/
+export GLOG_minloglevel=5
+
+# ditto variables
+export SECRET_KEY_PATH=$HOME/Ditto/ditto-cnn/src/mprat_scripts/
 
 # export PYTHONPATH=$HOME/Ditto/ditto-cnn/src/:$DITTO_CNN_TOOLS_ROOT:$DITTO_CNN_TOOLS_ROOT/utilities:$CAFFE_ROOT/python:$ANACONDA/lib/python2.7/site-packages:/usr/local/lib/python2.7/site-packages
 export PYTHONPATH=$CAFFE_ROOT/python:$ANACONDA/lib/python2.7/site-packages:/usr/local/lib/python2.7/site-packages:$SPEARMINT_ROOT
 export PATH=$ANACONDA/bin:/Users/mprat/.virtualenvs/caffe/bin:$CUDA/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
-export DYLD_FALLBACK_LIBRARY_PATH=$CUDA/lib:$ANACONDA/lib:/usr/local/lib:/usr/lib:/Users/mprat/Research/packages/caffe/.build_release/lib/
+export DYLD_FALLBACK_LIBRARY_PATH=$CUDA/lib:$ANACONDA/lib:/usr/local/lib:/usr/lib:/Users/mprat/Research/packages/caffe/.build_release/lib/:$CUDNN/lib
