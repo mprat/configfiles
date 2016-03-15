@@ -1,15 +1,15 @@
 # environment variables, especially for caffe
-# export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 # export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
 # export PYTHONPATH=$PYTHONPATH:/Users/mprat/gtk/inst/lib/python2.7/site-packages
 
 #export MATLAB_JAVA="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/jre"
 
-#alias for various programs
-alias jhbuild="~/.local/bin/jhbuild"
+# alias for various programs
+# alias jhbuild="~/.local/bin/jhbuild"
 alias sublime="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 # alias matlab="/Applications/MATLAB_R2015b.app/bin/matlab"
-#alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
+alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
 
 # ipython alias
 alias ipy_ditto="ipython -i -- /Users/mprat/Ditto/ditto-cnn/src/setup_paths.py"
@@ -33,35 +33,17 @@ export GIT_PS1_DESCRIBE_STYLE="branch"
 PS1="[\[\033[32m\]\w]\[\033[0m\]\$(__git_ps1)\n\[\033[1;36m\]\u\[\033[32m\]$ \[\
 \033[0m\]"
 
-# git configuration
-# git config --global --add alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
-
 # force Python not to write .pyc or .pyo files
 export PYTHONDONTWRITEBYTECODE=1
 
-# added by Anaconda 2.2.0 installer
-export PATH="/Users/mprat/anaconda/bin:$PATH"
-
-# virtualenvironment (from anaconda)
+# virtualenvironment
 export WORKON_HOME=~/.virtualenvs
-source /Users/mprat/anaconda/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper.sh
 
 # git bash completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
-
-# required for installation of https://github.com/RobotLocomotion/drake.git
-# export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# for sourcing
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# Bazel
-source /Users/mprat/.bazel/bin/bazel-complete.bash
-export PATH="$PATH:$HOME/bin" 
 
 # CUDA / cuDNN
 export CUDA=/usr/local/cuda
