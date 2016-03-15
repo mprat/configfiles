@@ -37,8 +37,8 @@ bind up:ctrl;alt;cmd    throw up    resize
 bind down:ctrl;alt;cmd  throw down  resize
 
 # Focus Bindings
-bind right:cmd;alt    focus right
-bind left:cmd;alt     focus left
+# bind right:cmd;alt    focus right
+# bind left:cmd;alt     focus left
 # bind up:cmd;alt      focus up
 # bind down:cmd;alt     focus down
 # bind up:cmd;alt   focus behind
