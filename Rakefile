@@ -1,19 +1,26 @@
 require 'rake/clean'
 
-CLEAN.include FileList['bash_profile'].pathmap("#{ENV['HOME']}/.%p")
+CLEAN.include FileList['bash_profile', 'screenrc', 'tmux.conf', 'gitconfig', 'vimrc', 'zshrc'].pathmap("#{ENV['HOME']}/.%p")
 
 desc "Set up Linux environment"
-task :setup_linux => [:apt] do
+task :setup_linux => [:apt, :common] do
   puts "Setting up Linux dotfiles."
 
   link_file("bash_profile_linux", ".bash_profile")
 end
 
 desc "Set up OSX environment"
-task :setup_osx do
+task :setup_osx => [:common] do
   puts "Setting up OSX dotfiles."
 
   link_file("bash_profile_osx", ".bash_profile")
+end
+
+desc "Common tasks"
+task :common do
+  %w[screenrc tmux.conf gitconfig vimrc zshrc].each do |script|
+  		link_file(script)
+  end
 end
 
 desc "Install packages from apt"
