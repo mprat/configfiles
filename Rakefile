@@ -26,7 +26,7 @@ end
 desc "Install packages from apt"
 task :apt do
   sh "sudo apt-get update"
-  sh "sudo apt-get -y install git vim tmux zsh"
+  sh "sudo apt-get -y install git vim tmux zsh tig"
 end
 
 def link_file(script, dotname=nil)
