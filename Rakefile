@@ -26,7 +26,15 @@ end
 desc "Install packages from apt"
 task :apt do
   sh "sudo apt-get update"
-  sh "sudo apt-get -y install git vim tmux zsh tig xclip rubygemsi git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev python-pip"
+  sh "sudo apt-get -y install build-essential"
+  sh "sudo apt-get -y install git git-core vim tmux zsh tig curl"
+  sh "sudo apt-get -y install ruby ruby-dev rubygems"
+  sh "sudo apt-get -y install python-pip python-software-properties"
+  sh "sudo apt-get -y install sqlite3 libsqlite3-dev"
+  sh "sudo apt-get -y install libssl-dev libcurl4-openssl-dev"
+  sh "sudo apt-get -y install zlib1g-dev libreadline-dev libyaml-dev libxml2-dev libxslt1-dev"
+  sh "sudo apt-get -y install xclip libffi-dev mesa-utils"
+  sh "sudo apt-get -y install inkscape"
 end
 
 desc "Set up python development env"
