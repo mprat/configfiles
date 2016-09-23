@@ -31,6 +31,7 @@ task :apt do
   sh "sudo apt-get -y install ruby ruby-dev rubygems"
   sh "sudo apt-get -y install python-pip python-software-properties"
   sh "sudo apt-get -y install sqlite3 libsqlite3-dev"
+  sh "sudo apt-get -y install nodejs"
   sh "sudo apt-get -y install libssl-dev libcurl4-openssl-dev"
   sh "sudo apt-get -y install zlib1g-dev libreadline-dev libyaml-dev libxml2-dev libxslt1-dev"
   sh "sudo apt-get -y install xclip libffi-dev mesa-utils"
