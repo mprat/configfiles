@@ -8,3 +8,7 @@ export GIT_PS1_DESCRIBE_STYLE="branch"
 # source /etc/bash_completion.d/git
 source /etc/bash_completion.d/git-prompt
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+
+# virtualenvironment
+export WORKON_HOME=~/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh

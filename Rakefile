@@ -26,7 +26,14 @@ end
 desc "Install packages from apt"
 task :apt do
   sh "sudo apt-get update"
-  sh "sudo apt-get -y install git vim tmux zsh tigi xclip"
+  sh "sudo apt-get -y install git vim tmux zsh tig xclip rubygemsi git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev python-pip"
+end
+
+desc "Set up python development env"
+task :python do
+  sh "pip install --upgrade pip"
+	sh "pip install virtualenv"
+	sh "pip install virtualenvwrapper"
 end
 
 def link_file(script, dotname=nil)
