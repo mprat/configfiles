@@ -34,6 +34,9 @@ task :python do
   sh "pip install --upgrade pip"
 	sh "pip install virtualenv"
 	sh "pip install virtualenvwrapper"
+  sh "source /usr/local/bin/virtualenvwrapper.sh"
+  sh "mkvirtualenv science"
+  sh "pip install -r science_requirements.txt"
 end
 
 def link_file(script, dotname=nil)
