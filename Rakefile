@@ -38,6 +38,13 @@ task :apt do
   sh "sudo apt-get -y install inkscape"
 end
 
+desc "Install zim wiki on Ubuntu"
+task :zim_ubuntu do
+  sh "sudo apt-add-repository ppa:jaap.karssenberg/zim"
+  sh "sudo apt-get update"
+  sh "sudo apt-get install zim"
+end
+
 desc "Set up python development env"
 task :python do
   sh "pip install --upgrade pip"
