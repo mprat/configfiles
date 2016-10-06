@@ -1,3 +1,9 @@
+jupyter
+matplotlib
 numpy
+pandas
+pillow
 pudb
+scikit-image
+scikit-learn
 scipy
