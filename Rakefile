@@ -36,6 +36,7 @@ task :apt do
   sh "sudo apt-get -y install zlib1g-dev libreadline-dev libyaml-dev libxml2-dev libxslt1-dev"
   sh "sudo apt-get -y install xclip libffi-dev mesa-utils"
   sh "sudo apt-get -y install inkscape"
+  sh "sudo apt-get install texlive-full"
 end
 
 desc "Install zim wiki on Ubuntu"
