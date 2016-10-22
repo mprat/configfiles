@@ -42,7 +42,8 @@ end
 desc "Install SQL on Linux"
 task :linux_sql do
   sh "sudo apt-get install mysql-server"
-  sh "sudo mysql_secure_installation"
+  sh "sudo apt-get install libmysqlclient-dev"
+  # sh "sudo mysql_secure_installation"
   sh "sudo mysql_install_db"
 end
 
