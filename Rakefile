@@ -39,6 +39,13 @@ task :apt do
   sh "sudo apt-get install texlive-full"
 end
 
+desc "Screen recorder on Linux"
+task :linux_screen_recorder do
+	sh "sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder"
+	sh "sudo apt-get update"
+	sh "sudo apt-get install simplescreenrecorder"
+end
+
 desc "Install SQL on Linux"
 task :linux_sql do
   sh "sudo apt-get install mysql-server"
