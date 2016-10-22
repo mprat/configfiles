@@ -3,7 +3,7 @@ require 'rake/clean'
 CLEAN.include FileList['bash_profile', 'screenrc', 'tmux.conf', 'gitconfig', 'vimrc', 'zshrc'].pathmap("#{ENV['HOME']}/.%p")
 
 desc "Set up Linux environment"
-task :setup_linux => [:apt, :common] do
+task :setup_linux => [:apt, :common, :linux_sql] do
   puts "Setting up Linux dotfiles."
 
   link_file("bash_profile_linux", ".bash_profile")
@@ -37,6 +37,13 @@ task :apt do
   sh "sudo apt-get -y install xclip libffi-dev mesa-utils"
   sh "sudo apt-get -y install inkscape"
   sh "sudo apt-get install texlive-full"
+end
+
+desc "Install SQL on Linux"
+task :linux_sql do
+  sh "sudo apt-get install mysql-server"
+  sh "sudo mysql_secure_installation"
+  sh "sudo mysql_install_db"
 end
 
 desc "Install zim wiki on Ubuntu"
