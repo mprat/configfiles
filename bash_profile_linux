@@ -12,3 +12,40 @@ PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 # virtualenvironment
 export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
+
+# android studio (for react-native)
+export ANDROID_HOME=~/Android/Sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+# julia 0.5.0
+# export PATH=$PATH:$HOME/Documents/software/julia-3c9d75391c/bin/
+
+# julia 0.6.0
+# export PATH=$PATH:$HOME/Documents/software/julia-903644385b/bin
+
+# julia 0.6.4
+# export PATH=$PATH:$HOME/Documents/software/julia-9d11f62bcb/bin/
+
+# julia 0.7.0
+# export PATH=$PATH:$HOME/Documents/software/julia-0.7.0/bin/
+
+# julia 1.0.0-rc1
+# export PATH=$PATH:$HOME/Documents/software/julia-1.0.0-rc1/bin/
+
+# julia 1.2.0
+# export PATH=$PATH:$HOME/Documents/software/julia-1.2.0/bin/
+
+# julia 1.5.2
+export PATH=$PATH:$HOME/Documents/software/julia-1.5.2/bin/
+
+# aws cli
+export PATH=~/.local/bin/:$PATH
+
+# python
+export PYTHONDONTWRITEBYTECODE=1
+
+# platformio
+export PATH=$PATH:$HOME/.platformio/penv/bin
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
