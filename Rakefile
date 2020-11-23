@@ -3,7 +3,7 @@ require 'rake/clean'
 CLEAN.include FileList['bash_profile', 'screenrc', 'tmux.conf', 'gitconfig', 'vimrc', 'zshrc'].pathmap("#{ENV['HOME']}/.%p")
 
 desc "Set up Linux environment"
-task :setup_linux => [:apt, :common, :linux_sql] do
+task :setup_linux => [:apt, :common] do
   puts "Setting up Linux dotfiles."
 
   link_file("bash_profile_linux", ".bash_profile")
@@ -29,11 +29,19 @@ task :apt do
   sh "sudo apt-get -y install build-essential"
   sh "sudo apt-get -y install git git-core vim tmux zsh tig curl"
   sh "sudo apt-get -y install ruby ruby-dev rubygems"
-  sh "sudo apt-get -y install python-pip python-software-properties"
+  sh "sudo apt-get -y install python3-pip python3-software-properties"
   sh "sudo apt-get -y install sqlite3 libsqlite3-dev"
-  sh "sudo apt-get -y install nodejs npm nodejs-legacy"
   sh "sudo apt-get -y install libssl-dev libcurl4-openssl-dev"
   sh "sudo apt-get -y install zlib1g-dev libreadline-dev libyaml-dev libxml2-dev libxslt1-dev"
+end
+
+desc "Setup node"
+task :setup_node do
+  sh "sudo apt-get -y install nodejs npm"
+end
+
+desc "Install more packages that take a long time"
+task :apt_long do
   sh "sudo apt-get -y install xclip libffi-dev mesa-utils"
   sh "sudo apt-get -y install inkscape"
   sh "sudo apt-get install texlive-full"
@@ -63,11 +71,11 @@ end
 
 desc "Set up python development env"
 task :python do
-  sh "pip install --upgrade pip"
-	sh "pip install virtualenv"
-	sh "pip install virtualenvwrapper"
+  sh "pip3 install --upgrade pip"
+	sh "pip3 install virtualenv"
+	sh "pip3 install virtualenvwrapper"
   sh "source /usr/local/bin/virtualenvwrapper.sh"
-  sh "mkvirtualenv science"
+  sh "mkvirtualenv science3"
   sh "pip install -r science_requirements.txt"
 end
 
