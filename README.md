@@ -19,8 +19,27 @@ To actually do the setup and installation:
 rake WHATEVER_TASK
 ```
 
+
+linux notes
+=====
+* add the following lines to the end of the .bashrc if they aren't already there to make sure the bash_profile is sourced
+
+```
+# make sure you source bash_profile
+if [ -f ~/.bash_profile ]; then
+	. ~/.bash_profile
+fi
+
+```
+
+
+pythondev
+========
+* pyenv --> go to their github; use pyenv-installer to install
+* pyenv-virtualenv
+
+
 Other programs to install
 ======
 * Zotero
-* https://github.com/xflux-gui/xflux-gui
 * sublime

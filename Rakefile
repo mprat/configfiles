@@ -27,7 +27,7 @@ desc "Install packages from apt"
 task :apt do
   sh "sudo apt-get update"
   sh "sudo apt-get -y install build-essential"
-  sh "sudo apt-get -y install git git-core vim tmux zsh tig curl"
+  sh "sudo apt-get -y install git git-core vim tmux zsh tig curl git-lfs"
   sh "sudo apt-get -y install ruby ruby-dev rubygems"
   sh "sudo apt-get -y install python3-pip python3-software-properties"
   sh "sudo apt-get -y install sqlite3 libsqlite3-dev"
