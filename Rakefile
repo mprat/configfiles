@@ -71,12 +71,7 @@ end
 
 desc "Set up python development env"
 task :python do
-  sh "pip3 install --upgrade pip"
-	sh "pip3 install virtualenv"
-	sh "pip3 install virtualenvwrapper"
-  sh "source /usr/local/bin/virtualenvwrapper.sh"
-  sh "mkvirtualenv science3"
-  sh "pip install -r science_requirements.txt"
+  sh "curl https://pyenv.run | bash"
 end
 
 def link_file(script, dotname=nil)
