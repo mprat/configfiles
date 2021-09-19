@@ -74,6 +74,12 @@ task :python do
   sh "curl https://pyenv.run | bash"
 end
 
+desc "Install Zotero"
+task :zotero_linux do
+  sh "wget -qO- https://github.com/retorquere/zotero-deb/releases/download/apt-get/install.sh | sudo bash"
+  sh "sudo apt-get update && sudo apt-get install zotero"
+end
+
 def link_file(script, dotname=nil)
 	if dotname == nil
 		dotname = ".#{script}"
