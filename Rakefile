@@ -26,7 +26,7 @@ end
 desc "Install packages from apt"
 task :apt do
   sh "sudo apt-get update"
-  sh "sudo apt-get -y install build-essential"
+  sh "sudo apt-get -y install build-essential libffi-dev"
   sh "sudo apt-get -y install git git-core vim tmux zsh tig curl git-lfs"
   sh "sudo apt-get -y install ruby ruby-dev rubygems"
   sh "sudo apt-get -y install python3-pip python3-software-properties"
@@ -42,7 +42,7 @@ end
 
 desc "Install more packages that take a long time"
 task :apt_long do
-  sh "sudo apt-get -y install xclip libffi-dev mesa-utils"
+  sh "sudo apt-get -y install xclip mesa-utils"
   sh "sudo apt-get -y install inkscape"
   sh "sudo apt-get install texlive-full"
 end
