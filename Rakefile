@@ -26,7 +26,7 @@ end
 desc "Install packages from apt"
 task :apt do
   sh "sudo apt-get update"
-  sh "sudo apt-get -y install build-essential libffi-dev"
+  sh "sudo apt-get -y install build-essential libffi-dev libbz2-dev"
   sh "sudo apt-get -y install git git-core vim tmux zsh tig curl git-lfs"
   sh "sudo apt-get -y install ruby ruby-dev rubygems"
   sh "sudo apt-get -y install python3-pip python3-software-properties"
