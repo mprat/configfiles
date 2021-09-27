@@ -43,3 +43,10 @@ Other programs to install
 ======
 * Zotero
 * sublime
+
+Sublime Packages
+======
+* Layout
+* Gitgutter
+* SublimeLinter
+* SideBarEnhancements
