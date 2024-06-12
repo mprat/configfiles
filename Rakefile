@@ -34,7 +34,7 @@ task :apt do
   sh "sudo apt-get -y install libssl-dev libcurl4-openssl-dev"
   sh "sudo apt-get -y install zlib1g-dev libreadline-dev libyaml-dev libxml2-dev libxslt1-dev"
   # for all the printer driverz
-  sh "sudp apt-get -y install printer-driver-gutenprint"
+  sh "sudo apt-get -y install printer-driver-gutenprint"
 end
 
 desc "Setup node"
