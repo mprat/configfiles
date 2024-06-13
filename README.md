@@ -46,7 +46,13 @@ Other programs to install
 
 Sublime Packages
 ======
-* Layout
+* AutoDocstring
 * Gitgutter
+* LaTeXTools
+* Layout
+* LSP
+* LSP-json
+* LSP-ruff
 * SublimeLinter
 * SideBarEnhancements
+* TOML

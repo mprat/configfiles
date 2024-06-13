@@ -3,7 +3,7 @@ require 'rake/clean'
 CLEAN.include FileList['bash_profile', 'screenrc', 'tmux.conf', 'gitconfig', 'vimrc', 'zshrc'].pathmap("#{ENV['HOME']}/.%p")
 
 desc "Set up Linux environment"
-task :setup_linux => [:apt, :common] do
+task :setup_linux => [:apt, :common, :zim_ubuntu, :python, :apt_long] do
   puts "Setting up Linux dotfiles."
 
   link_file("bash_profile_linux", ".bash_profile")
@@ -46,7 +46,7 @@ desc "Install more packages that take a long time"
 task :apt_long do
   sh "sudo apt-get -y install xclip mesa-utils"
   sh "sudo apt-get -y install inkscape"
-  sh "sudo apt-get install texlive-full"
+  sh "sudo apt-get -y install texlive-full"
 end
 
 desc "Screen recorder on Linux"
@@ -78,8 +78,8 @@ end
 
 desc "Install Zotero"
 task :zotero_linux do
-  sh "wget -qO- https://github.com/retorquere/zotero-deb/releases/download/apt-get/install.sh | sudo bash"
-  sh "sudo apt-get update && sudo apt-get install zotero"
+  sh "wget -qO- https://raw.githubusercontent.com/retorquere/zotero-deb/master/install.sh | sudo bash"
+  sh "sudo apt update && sudo apt -y install zotero"
 end
 
 def link_file(script, dotname=nil)
