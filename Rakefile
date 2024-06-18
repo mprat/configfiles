@@ -73,6 +73,8 @@ end
 
 desc "Set up python development env"
 task :python do
+   # this is to enable compiling python with pyenv with tk support
+  sh "sudo apt-get -y install tk-dev"
   sh "curl https://pyenv.run | bash"
 end
 
