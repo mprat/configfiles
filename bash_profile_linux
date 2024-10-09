@@ -17,27 +17,6 @@ PS1='[\[\033[01;32m\]\u@\h\[\033[00m]\] [\[\033[01;34m\]\W$(__git_ps1 " (%s)")\[
 # export PATH=${PATH}:${ANDROID_HOME}/tools
 # export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
-# julia 0.5.0
-# export PATH=$PATH:$HOME/Documents/software/julia-3c9d75391c/bin/
-
-# julia 0.6.0
-# export PATH=$PATH:$HOME/Documents/software/julia-903644385b/bin
-
-# julia 0.6.4
-# export PATH=$PATH:$HOME/Documents/software/julia-9d11f62bcb/bin/
-
-# julia 0.7.0
-# export PATH=$PATH:$HOME/Documents/software/julia-0.7.0/bin/
-
-# julia 1.0.0-rc1
-# export PATH=$PATH:$HOME/Documents/software/julia-1.0.0-rc1/bin/
-
-# julia 1.2.0
-# export PATH=$PATH:$HOME/Documents/software/julia-1.2.0/bin/
-
-# julia 1.5.2
-# export PATH=$PATH:$HOME/Documents/software/julia-1.5.2/bin/
-
 # aws cli
 # export PATH=~/.local/bin/:$PATH
 
@@ -60,3 +39,18 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/mprat/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/mprat/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<

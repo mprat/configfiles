@@ -39,7 +39,8 @@ end
 
 desc "Setup node"
 task :setup_node do
-  sh "sudo apt-get -y install nodejs npm"
+  # sh "sudo apt-get -y install nodejs npm"
+  sh "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash"
 end
 
 desc "Install more packages that take a long time"
